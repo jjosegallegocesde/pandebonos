@@ -71,18 +71,30 @@ public class Main {
                         productoSeleccionado=lea.nextInt();
                         switch (productoSeleccionado){
                             case 1:
+                                System.out.print("Digita cuantos pandebonos tradicionales se desean: ");
+                                cantidadTradicional=lea.nextInt();
                                 break;
                             case 2:
+                                System.out.print("Digita cantidad guayaba: ");
+                                cantidadGuayaba= lea.nextInt();
                                 break;
                             case 3:
+                                System.out.print("Digita cantidad arequipe: ");
+                                cantidadArequipe=lea.nextInt();
                                 break;
                             case 4:
+                                System.out.print("Digita cantidad 7 quesos");
+                                cantidadQuesos=lea.nextInt();
                                 break;
                             case 5:
+                                System.out.print("Digita cantidad de bebidas: ");
+                                cantidadBebidas=lea.nextInt();
                                 break;
                             case 6:
+                                System.out.println("orden terminada");
                                 break;
                             default:
+                                System.out.println("Producto no encontrado");
                                 break;
 
                         }
@@ -90,12 +102,25 @@ public class Main {
 
                     break;
                 case 2:
+                    Integer totalSinPropina=((cantidadTradicional*8000)
+                            +(cantidadGuayaba*9500)+
+                            (cantidadArequipe*12000)+
+                            (cantidadQuesos*20000)+
+                            (cantidadBebidas*9500));
+
+                    Double totalConPropina=((totalSinPropina)+(totalSinPropina*0.1));
+                    //Rutina para mostrar un mensaje con o sin propina
+
                     break;
                 case 3:
+                    //que volver a pedir cad auno de 6 productos
+                    //en que estan asignados cada uno de los contadores
                     break;
                 case 4:
+                    System.out.println("Compra terminada");
                     break;
                 default:
+                    System.out.println("Opcion invalida");
                     break;
             }
 
